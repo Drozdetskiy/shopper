@@ -1,0 +1,21 @@
+{
+    "name": "shopper",
+    "version": "1.0.0",
+    "description": "Final project for TMS FE part 2",
+    "author": "Mikhail Drozdetskiy <m.drozdetskiy@gmail.com>",
+    "private": false,
+    "scripts": {
+        "dev": "BOTOOL_FE__API_URL=http://127.0.0.1:9021/ HOST=0.0.0.0 nuxt",
+        "eslint": "eslint src --ext vue,js",
+        "build": "NODE_ENV=production nuxt build",
+        "start-as-prod": "BOTOOL_FE__API_URL=http://127.0.0.1:9021/ NODE_ENV=production nuxt build && nuxt start",
+        "stylelint": "stylelint \"./**/*.scss\" --fix"
+    },
+    "engines": {
+        "node": ">= 15.5.1",
+        "npm": ">= 7.3.0"
+    },
+    "devDependencies": {
+        "prettier": "^2.0.5"
+    }
+}
