@@ -5,10 +5,6 @@
     "author": "Mikhail Drozdetskiy <m.drozdetskiy@gmail.com>",
     "private": false,
     "scripts": {
-        "dev": "BOTOOL_FE__API_URL=http://127.0.0.1:9021/ HOST=0.0.0.0 nuxt",
-        "eslint": "eslint src --ext vue,js",
-        "build": "NODE_ENV=production nuxt build",
-        "start-as-prod": "BOTOOL_FE__API_URL=http://127.0.0.1:9021/ NODE_ENV=production nuxt build && nuxt start",
         "stylelint": "stylelint \"./**/*.scss\" --fix"
     },
     "engines": {
@@ -16,6 +12,16 @@
         "npm": ">= 7.3.0"
     },
     "devDependencies": {
-        "prettier": "^2.0.5"
+        "@babel/cli": "^7.12.10",
+        "@babel/core": "^7.12.10",
+        "@babel/node": "^7.12.10",
+        "@babel/preset-env": "^7.12.11",
+        "prettier": "^2.0.5",
+        "webpack": "^5.14.0",
+        "webpack-cli": "^4.3.1"
+    },
+    "dependencies": {
+        "flickity": "^2.2.2",
+        "flickity-imagesloaded": "^2.0.0"
     }
 }
