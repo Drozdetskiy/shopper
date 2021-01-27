@@ -3,7 +3,7 @@ import { getShopData } from "./data/getShopData";
 import { getStore } from "./store/store";
 import { createMap } from "./mapLogic/createMap";
 
-function getBubbleClickCallback(map, markId) {
+function getBubbleClickCallback(map, shopInfo) {
     function callback(event) {
         const [x, y] = [event.get("clientX"), event.get("clientY")];
         const el = createDetailedModalView([x, y]);
@@ -12,6 +12,12 @@ function getBubbleClickCallback(map, markId) {
         ).content;
         const node = shopInfoNodeTemplate.querySelector(".shop-data");
         const shopInfoNode = node.cloneNode(true);
+        const header = shopInfoNode.querySelector(".header");
+        const description = shopInfoNode.querySelector(".description");
+        const address = shopInfoNode.querySelector(".address");
+        header.innerText = shopInfo.name;
+        description.innerText = shopInfo.description;
+        address.innerText = shopInfo.contact_info.address;
         const gallery = shopInfoNode.querySelector(".gallery");
 
         // window.dispatchEvent(new Event("resize"));

@@ -1,0 +1,4 @@
+const ICON_IMAGE_SIZE = [30, 42];
+const ICON_IMAGE_OFFSET = [-15, -40];
+
+export { ICON_IMAGE_SIZE, ICON_IMAGE_OFFSET };

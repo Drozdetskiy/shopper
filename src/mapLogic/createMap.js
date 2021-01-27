@@ -3,11 +3,11 @@ import { getShopPoint } from "./getShopPoint";
 function createMap(mapData, shopData, getBubbleClickCallback) {
     ymaps.ready(function () {
         const map = new ymaps.Map("map", mapData);
-        shopData.forEach((shopInfo, i) => {
-            const shopPoint = getShopPoint(shopInfo, i);
+        shopData.forEach((shopInfo) => {
+            const shopPoint = getShopPoint(shopInfo);
             shopPoint.events.add(
                 "click",
-                getBubbleClickCallback(map, `my-mark-${i}`)
+                getBubbleClickCallback(map, shopInfo)
             );
             map.geoObjects.add(shopPoint);
         });
