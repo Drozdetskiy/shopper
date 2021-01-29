@@ -1,19 +1,3 @@
-// class LocalStorage {
-//     constructor() {
-//         this.storage = {};
-//     }
-//
-//     setItem(key, data) {
-//         this.storage[key] = data;
-//     }
-//
-//     getItem(key) {
-//         return this.storage[key];
-//     }
-// }
-//
-// const localStorage = new LocalStorage();
-
 class Store {
     constructor(name = "appStorage") {
         this.name = name;
