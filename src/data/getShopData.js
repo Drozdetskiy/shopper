@@ -9,19 +9,19 @@ const SHOP_INFO_LIST = [
         },
         imagesData: [
             {
-                src: "link_1",
+                src: "assets/logo.png",
                 alterName: "alter name",
             },
             {
-                src: "link_2",
+                src: "assets/logo.png",
                 alterName: "alter name",
             },
             {
-                src: "link_3",
+                src: "assets/logo.png",
                 alterName: "alter name",
             },
             {
-                src: "link_4",
+                src: "assets/logo.png",
                 alterName: "alter name",
             },
         ],
@@ -36,19 +36,19 @@ const SHOP_INFO_LIST = [
         },
         imagesData: [
             {
-                src: "link_1",
+                src: "assets/logo.png",
                 alterName: "alter name",
             },
             {
-                src: "link_2",
+                src: "assets/logo.png",
                 alterName: "alter name",
             },
             {
-                src: "link_3",
+                src: "assets/logo.png",
                 alterName: "alter name",
             },
             {
-                src: "link_4",
+                src: "assets/logo.png",
                 alterName: "alter name",
             },
         ],
@@ -63,19 +63,19 @@ const SHOP_INFO_LIST = [
         },
         imagesData: [
             {
-                src: "link_1",
+                src: "assets/logo.png",
                 alterName: "alter name",
             },
             {
-                src: "link_2",
+                src: "assets/logo.png",
                 alterName: "alter name",
             },
             {
-                src: "link_3",
+                src: "assets/logo.png",
                 alterName: "alter name",
             },
             {
-                src: "link_4",
+                src: "assets/logo.png",
                 alterName: "alter name",
             },
         ],
@@ -90,19 +90,19 @@ const SHOP_INFO_LIST = [
         },
         imagesData: [
             {
-                src: "link_1",
+                src: "assets/logo.png",
                 alterName: "alter name",
             },
             {
-                src: "link_2",
+                src: "assets/logo.png",
                 alterName: "alter name",
             },
             {
-                src: "link_3",
+                src: "assets/logo.png",
                 alterName: "alter name",
             },
             {
-                src: "link_4",
+                src: "assets/logo.png",
                 alterName: "alter name",
             },
         ],
@@ -117,19 +117,19 @@ const SHOP_INFO_LIST = [
         },
         imagesData: [
             {
-                src: "link_1",
+                src: "assets/logo.png",
                 alterName: "alter name",
             },
             {
-                src: "link_2",
+                src: "assets/logo.png",
                 alterName: "alter name",
             },
             {
-                src: "link_3",
+                src: "assets/logo.png",
                 alterName: "alter name",
             },
             {
-                src: "link_4",
+                src: "assets/logo.png",
                 alterName: "alter name",
             },
         ],

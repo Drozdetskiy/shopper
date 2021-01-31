@@ -7,14 +7,10 @@
     <meta name="description" content="Site with shops catalogue">
     <meta name="author" content="Mikhail Drozdetskiy">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link href="https://yandex.st/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
-<!--    TODO: DELETE-->
-    <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="icon" href="assets/icon.png" type="image/icon type">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;" type="text/javascript"></script>
     <script src="main.js" type="text/javascript"></script>
     <style>
@@ -45,12 +41,8 @@
         <nav class="navigation">
             <button class="primary">Press me</button>
             <button>Buy online</button>
-            <select>
+            <select id="main-menu-select">
                 <option disabled>Choose shop</option>
-                <option value="shop#1">Shop #1</option>
-                <option value="shop#2">Shop #2</option>
-                <option value="shop#3">Shop #3</option>
-                <option value="shop#4">Shop #4</option>
             </select>
         </nav>
     </header>
@@ -60,13 +52,7 @@
                 <img class="close-icon" src="assets/close-icon.svg"/>
             </button>
             <p class="header"></p>
-            <div class="gallery">
-                <img src="assets/logo.png" class="gallery-cell"/>
-                <img src="assets/logo.png" class="gallery-cell"/>
-                <img src="assets/logo.png" class="gallery-cell"/>
-                <img src="assets/logo.png" class="gallery-cell"/>
-                <img src="assets/logo.png" class="gallery-cell"/>
-            </div>
+            <div class="gallery"></div>
             <p class="description"></p>
             <p class="address"></p>
         </div>

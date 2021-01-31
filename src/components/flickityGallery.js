@@ -1,3 +1,5 @@
+const FLICKITY_IMAGE_CLASS = "gallery-cell";
+
 class FlickityGallery {
     constructor(gallery, shopInfo) {
         this._gallery = gallery;
@@ -9,7 +11,11 @@ class FlickityGallery {
             const image = new Image();
             image.src = src;
             image.alt = alterName;
-            return Image;
+            image.className = FLICKITY_IMAGE_CLASS;
+            return image;
+        });
+        imgList.forEach((image) => {
+            this.gallery.appendChild(image);
         });
     }
 

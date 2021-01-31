@@ -2,48 +2,29 @@ import { getMapData } from "./data/getMapData";
 import { getShopData } from "./data/getShopData";
 import { getStore } from "./store/store";
 import { createMap } from "./mapLogic/createMap";
-import { ShopInfoNode } from "./components/shopInfoNode";
-import { FlickityGallery } from "./components/flickityGallery";
+import { InMemoryStore, StoredList } from "./store/inMemoryStore";
+import { getApp } from "./app/app";
+import { getBubbleClickCallback } from "./componentsLogic/shopInfoNode/callbacks";
 
-function getBubbleClickCallback(map, shopInfo) {
-    function callback(event) {
-        const shopInfoNode = new ShopInfoNode(shopInfo, [
-            event.get("clientX"),
-            event.get("clientY"),
-        ]);
-        shopInfoNode.compile();
-        document.body.appendChild(shopInfoNode.node);
-        const gallery = new FlickityGallery(shopInfoNode.gallery, shopInfo);
-        gallery.compile();
-        const Flickity = require("flickity");
-        require("flickity-imagesloaded");
+async function initApp() {
+    const app = getApp();
 
-        const flkty = new Flickity(gallery.gallery, {
-            imagesLoaded: true,
-        });
-        map.behaviors.disable("scrollZoom");
-    }
-    return callback;
-}
-
-function insertElement(el) {
-    const currentMap = document.getElementById("map");
-    document.body.insertBefore(el, currentMap.nextSibling);
-}
-
-async function main() {
     const store = getStore();
     store.add("mapData", getMapData, 10 * 60);
     store.add("shopData", getShopData, 5 * 60);
-
     await store.fetchStore();
+
+    const inMemoryStore = new InMemoryStore({ shopInfoNodes: StoredList });
+    app.store = store;
+    app.inMemoryStore = inMemoryStore;
+
     const [mapData, shopData] = await Promise.all([
-        store.get("mapData"),
-        store.get("shopData"),
+        app.store.get("mapData"),
+        app.store.get("shopData"),
     ]);
     createMap(mapData, shopData, getBubbleClickCallback);
 }
 
-main().catch((ex) => {
+initApp().catch((ex) => {
     console.error("Can`t init app");
 });
