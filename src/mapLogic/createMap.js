@@ -8,10 +8,6 @@ function createMap(mapData, shopData, getBubbleClickCallback) {
 
         shopData.forEach((shopInfo, key) => {
             const shopPoint = getShopPoint(shopInfo);
-            shopPoint.events.add(
-                "click",
-                getBubbleClickCallback(map, shopInfo)
-            );
             map.geoObjects.add(shopPoint);
             menu.addOption(shopPoint, shopInfo, key);
         });
