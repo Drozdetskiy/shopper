@@ -137,7 +137,7 @@ const SHOP_INFO_LIST = [
 ];
 
 async function getShopData() {
-    return await Promise.resolve(SHOP_INFO_LIST);
+    return SHOP_INFO_LIST;
 }
 
 export { getShopData };

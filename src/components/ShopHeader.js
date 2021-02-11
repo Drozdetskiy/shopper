@@ -1,0 +1,3 @@
+const ShopHeader = () => {};
+
+export { ShopHeader };

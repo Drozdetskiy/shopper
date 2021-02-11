@@ -1,0 +1,3 @@
+const ShopDescription = () => {};
+
+export { ShopDescription };

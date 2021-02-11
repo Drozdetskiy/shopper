@@ -1,0 +1,3 @@
+const ShopContactInfo = () => {};
+
+export { ShopContactInfo };

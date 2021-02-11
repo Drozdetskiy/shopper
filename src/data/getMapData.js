@@ -5,7 +5,7 @@ const MAP_DATA = {
 };
 
 async function getMapData() {
-    return await Promise.resolve(MAP_DATA);
+    return MAP_DATA;
 }
 
 export { getMapData };

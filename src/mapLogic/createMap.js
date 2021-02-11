@@ -1,17 +1,21 @@
 import { getShopPoint } from "./getShopPoint";
-import { MainMenuSelect } from "../components/mainMenuSelect";
+import { MainMenuSelect } from "../components/MainMenuSelect";
 
-function createMap(mapData, shopData, getBubbleClickCallback) {
+function createMap(mapData, shopData) {
     ymaps.ready(function () {
         const map = new ymaps.Map("map", mapData);
-        const menu = new MainMenuSelect();
-
+        const optionsList = [];
+        const shopPointsList = [];
         shopData.forEach((shopInfo, key) => {
             const shopPoint = getShopPoint(shopInfo);
             map.geoObjects.add(shopPoint);
-            menu.addOption(shopPoint, shopInfo, key);
+            shopPointsList.push(shopPoint);
+            optionsList.push(new Option(shopInfo.name, key));
         });
-        menu.compile();
+        const menu = MainMenuSelect(shopPointsList);
+        optionsList.forEach((option) => {
+            menu.appendChild(option);
+        });
     });
 }
 
