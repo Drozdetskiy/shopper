@@ -28,7 +28,7 @@ const ShopSlider = (shopInfo) => {
     );
 };
 
-const initSlider = () => {
+function initSlider() {
     let slideIndex = 1;
 
     const plusSlides = (n) => {
@@ -74,6 +74,6 @@ const initSlider = () => {
     next.addEventListener("click", () => {
         plusSlides(1);
     });
-};
+}
 
 export { ShopSlider, initSlider };
