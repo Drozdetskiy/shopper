@@ -1,3 +1,3 @@
-const ShopTitle = ({ title }) => `<p class="title">${title}</p>`;
+const ShopTitle = ({ title }) => `<h2 class="title">${title}</h2>`;
 
 export { ShopTitle };
