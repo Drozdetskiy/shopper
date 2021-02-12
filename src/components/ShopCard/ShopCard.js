@@ -9,7 +9,6 @@ const ShopCard = (shopInfo) => {
     content.push(ShopSlider(shopInfo));
     content.push(ShopDescription(shopInfo));
     content.push(ShopContactInfo(shopInfo));
-    console.log(content.join(''));
     return `<div class="shop-info-container"> ${content.join('')} </div>`;
 };
 
