@@ -1,6 +1,6 @@
 const SHOP_INFO_LIST = [
     {
-        header: "WARSAW",
+        title: "WARSAW",
         coords: [52.237049, 21.017532],
         description: "warsaw_desc",
         contactInfo: {
@@ -9,25 +9,25 @@ const SHOP_INFO_LIST = [
         },
         imagesData: [
             {
-                src: "assets/logo.png",
+                src: "assets/zara/zara1.jpg",
                 alterName: "alter name",
             },
             {
-                src: "assets/logo.png",
+                src: "assets/zara/zara2.jpg",
                 alterName: "alter name",
             },
             {
-                src: "assets/logo.png",
+                src: "assets/zara/zara3.jpg",
                 alterName: "alter name",
             },
             {
-                src: "assets/logo.png",
+                src: "assets/zara/zara4.jpg",
                 alterName: "alter name",
             },
         ],
     },
     {
-        header: "MOSCOW",
+        title: "MOSCOW",
         coords: [55.75222, 37.61556],
         description: "moscow_desc",
         contactInfo: {
@@ -36,25 +36,25 @@ const SHOP_INFO_LIST = [
         },
         imagesData: [
             {
-                src: "assets/logo.png",
+                src: "assets/adidas/adidas1.jpeg",
                 alterName: "alter name",
             },
             {
-                src: "assets/logo.png",
+                src: "assets/adidas/adidas2.jpg",
                 alterName: "alter name",
             },
             {
-                src: "assets/logo.png",
+                src: "assets/adidas/adidas3.jpg",
                 alterName: "alter name",
             },
             {
-                src: "assets/logo.png",
+                src: "assets/adidas/adidas4.jpeg",
                 alterName: "alter name",
             },
         ],
     },
     {
-        header: "MILAN",
+        title: "MILAN",
         coords: [45.464664, 9.18854],
         description: "milan_desc",
         contactInfo: {
@@ -63,25 +63,25 @@ const SHOP_INFO_LIST = [
         },
         imagesData: [
             {
-                src: "assets/logo.png",
+                src: "assets/nike/nike1.jpg",
                 alterName: "alter name",
             },
             {
-                src: "assets/logo.png",
+                src: "assets/nike/nike2.jpg",
                 alterName: "alter name",
             },
             {
-                src: "assets/logo.png",
+                src: "assets/nike/nike3.jpg",
                 alterName: "alter name",
             },
             {
-                src: "assets/logo.png",
+                src: "assets/nike/nike4.jpg",
                 alterName: "alter name",
             },
         ],
     },
     {
-        header: "LONDON",
+        title: "LONDON",
         coords: [51.50853, -0.076132],
         description: "london_desc",
         contactInfo: {
@@ -90,25 +90,25 @@ const SHOP_INFO_LIST = [
         },
         imagesData: [
             {
-                src: "assets/logo.png",
+                src: "assets/mango/mango1.jpg",
                 alterName: "alter name",
             },
             {
-                src: "assets/logo.png",
+                src: "assets/mango/mangoa2.jpg",
                 alterName: "alter name",
             },
             {
-                src: "assets/logo.png",
+                src: "assets/mango/mango3.jpeg",
                 alterName: "alter name",
             },
             {
-                src: "assets/logo.png",
+                src: "assets/mango/mango4.jpg",
                 alterName: "alter name",
             },
         ],
     },
     {
-        header: "PARIS",
+        title: "PARIS",
         coords: [48.864716, 2.349014],
         description: "paris_desc",
         contactInfo: {
@@ -117,19 +117,19 @@ const SHOP_INFO_LIST = [
         },
         imagesData: [
             {
-                src: "assets/logo.png",
+                src: "assets/sportmaster/sportmaster1.jpg",
                 alterName: "alter name",
             },
             {
-                src: "assets/logo.png",
+                src: "assets/sportmaster/sportmaster2.jpg",
                 alterName: "alter name",
             },
             {
-                src: "assets/logo.png",
+                src: "assets/sportmaster/sportmaster3.jpg",
                 alterName: "alter name",
             },
             {
-                src: "assets/logo.png",
+                src: "assets/sportmaster/sportmaster4.jpg",
                 alterName: "alter name",
             },
         ],

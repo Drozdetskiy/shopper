@@ -1,6 +1,6 @@
 import { ICON_IMAGE_OFFSET, ICON_IMAGE_SIZE } from "./constants";
-import { initSlider } from "../../components/ShopSlider";
-import { ShopCard } from "../../components/ShopCard";
+import { initSlider } from "../../components/ShopCard/ShopSlider";
+import { ShopCard } from "../../components/ShopCard/ShopCard";
 
 function getShopPoint(shopInfo) {
     const BalloonContentLayout = ymaps.templateLayoutFactory.createClass(

@@ -9,7 +9,7 @@ function initMap(mapData, shopData, postInit) {
             const shopPoint = getShopPoint(shopInfo);
             shopPoints.push(shopPoint);
             map.geoObjects.add(shopPoint);
-            options.push(new Option(shopInfo.header, key));
+            options.push(new Option(shopInfo.title, key));
         });
 
         postInit(shopPoints, options);

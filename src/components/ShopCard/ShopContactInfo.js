@@ -1,6 +1,6 @@
 const ShopContactInfo = ({ contactInfo }) => {
     const { address, phone } = contactInfo;
-    return `<p class="address">${address}</p><p class="phone">${phone}</p>`;
+    return `<address class="address">${address}</address><p class="phone">${phone}</p>`;
 };
 
 export { ShopContactInfo };
