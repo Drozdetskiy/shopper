@@ -12,7 +12,7 @@ const ShopSliderContainer = (slides, dots) => {
 const ShopSlide = ({ src, alterName }, key, length) => {
     return (
         '<div class="mySlides fade">' +
-        `<div class="numbertext">${key} / ${length}</div>` +
+        `<div class="numbertext">${key + 1} / ${length}</div>` +
         `<img src="${src}" alt="${alterName}" style="width:100%">` +
         `<div class="text">${alterName}</div>` +
         "</div>"
