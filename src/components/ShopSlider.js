@@ -1,32 +1,35 @@
-const ShopSlider = (shopInfo) => {
+const ShopSliderContainer = (slides, dots) => {
     return (
         '<div class="slideshow-container">' +
-        '  <div class="mySlides fade">' +
-        '    <div class="numbertext">1 / 3</div>' +
-        '    <img src="assets/logo.svg" style="width:100%">' +
-        '    <div class="text">Caption Text</div>' +
-        "  </div>" +
-        '  <div class="mySlides fade">' +
-        '    <div class="numbertext">2 / 3</div>' +
-        '    <img src="assets/logo.svg" style="width:100%">' +
-        '    <div class="text">Caption Two</div>' +
-        "  </div>" +
-        '  <div class="mySlides fade">' +
-        '    <div class="numbertext">3 / 3</div>' +
-        '    <img src="assets/logo.svg" style="width:100%">' +
-        '    <div class="text">Caption Three</div>' +
-        "  </div>" +
-        '  <a id="prev-shop-img" class="prev">&#10094;</a>' +
-        '  <a id="next-shop-img" class="next">&#10095;</a>' +
-        "</div>" +
-        "<br>" +
-        '<div style="text-align:center">' +
-        '  <span class="dot"></span>' +
-        '  <span class="dot"></span>' +
-        '  <span class="dot"></span>' +
+        slides.join("") +
+        '<a id="prev-shop-img" class="prev">&#10094;</a>' +
+        '<a id="next-shop-img" class="next">&#10095;</a>' +
+        `<div style="text-align:center">${dots.join("")}</div>` +
         "</div>"
     );
 };
+
+const ShopSlide = ({ src, alterName }, key, length) => {
+    return (
+        '<div class="mySlides fade">' +
+        `<div class="numbertext">${key} / ${length}</div>` +
+        `<img src="${src}" alt="${alterName}" style="width:100%">` +
+        `<div class="text">${alterName}</div>` +
+        "</div>"
+    );
+};
+
+const ShopSlider = ({ imagesData }) => {
+    const slides = imagesData.map((imageData, index, arr) =>
+        ShopSlide(imageData, index, arr.length)
+    );
+    const dots = imagesData.reduce((acc) => [ShopSliderDot(), ...acc], []);
+    const shopSliderDot = ShopSliderContainer(slides, dots);
+    console.log(shopSliderDot);
+    return ShopSliderContainer(slides, dots);
+};
+
+const ShopSliderDot = () => '<span class="dot"></span>';
 
 function initSlider() {
     let slideIndex = 1;
