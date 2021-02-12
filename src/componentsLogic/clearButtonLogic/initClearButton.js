@@ -1,7 +1,7 @@
-import { DEFAULT_OPTION_VALUE } from "./constants";
+import { DEFAULT_OPTION_VALUE } from './constants';
 
 function initClearButton(menu, shopPoints) {
-    const [closeButton] = document.getElementsByClassName("clear");
+    const [closeButton] = document.getElementsByClassName('clear');
     const callback = () => {
         shopPoints
             .filter((shopPoint) => shopPoint)
@@ -10,7 +10,7 @@ function initClearButton(menu, shopPoints) {
             });
         menu.value = DEFAULT_OPTION_VALUE;
     };
-    closeButton.addEventListener("click", callback);
+    closeButton.addEventListener('click', callback);
 }
 
 export { initClearButton };

@@ -1,4 +1,4 @@
-import { MAIN_MENU_SELECT_ID } from "./constants";
+import { MAIN_MENU_SELECT_ID } from './constants';
 
 function initMenuSelect(shopPoints, options) {
     const menu = document.getElementById(MAIN_MENU_SELECT_ID);
@@ -7,11 +7,11 @@ function initMenuSelect(shopPoints, options) {
         return () => {
             const select = document.getElementById(MAIN_MENU_SELECT_ID);
             const placemark = placemarks[select.value];
-            placemark.events.fire("click");
+            placemark.events.fire('click');
         };
     };
 
-    menu.addEventListener("change", getChangeCallback(shopPoints));
+    menu.addEventListener('change', getChangeCallback(shopPoints));
     options.forEach((option) => {
         menu.appendChild(option);
     });

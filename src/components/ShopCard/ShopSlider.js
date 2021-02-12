@@ -1,6 +1,6 @@
-import { ShopSlide } from "./ShopSlide";
-import { ShopSliderContainer } from "./ShopSliderContainer";
-import { ShopSliderDot } from "./ShopSliderDot";
+import { ShopSlide } from './ShopSlide';
+import { ShopSliderContainer } from './ShopSliderContainer';
+import { ShopSliderDot } from './ShopSliderDot';
 
 const ShopSlider = ({ imagesData }) => {
     const slides = imagesData.map((imageData, index, arr) =>
@@ -22,8 +22,8 @@ function initSlider() {
     };
 
     const showSlides = (n) => {
-        const slides = document.getElementsByClassName("slide");
-        const dots = document.getElementsByClassName("dot");
+        const slides = document.getElementsByClassName('slide');
+        const dots = document.getElementsByClassName('dot');
         if (n > slides.length) {
             slideIndex = 1;
         }
@@ -31,29 +31,30 @@ function initSlider() {
             slideIndex = slides.length;
         }
         for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+            slides[i].style.display = 'none';
         }
         for (let i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
+            dots[i].className = dots[i].className.replace(' active', '');
         }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
+        slides[slideIndex - 1].style.display = 'block';
+        dots[slideIndex - 1].className += ' active';
     };
 
     showSlides(slideIndex);
 
-    const elements = document.getElementsByClassName("dot");
+    const elements = document.getElementsByClassName('dot');
     Array.from(elements).forEach((el, i) => {
-        el.addEventListener("click", () => {
+        el.addEventListener('click', () => {
             currentSlide(i + 1);
         });
     });
-    const prev = document.getElementById("prev-shop-img");
-    prev.addEventListener("click", () => {
+
+    const prev = document.getElementById('prev-shop-img');
+    prev.addEventListener('click', () => {
         plusSlides(-1);
     });
-    const next = document.getElementById("next-shop-img");
-    next.addEventListener("click", () => {
+    const next = document.getElementById('next-shop-img');
+    next.addEventListener('click', () => {
         plusSlides(1);
     });
 }

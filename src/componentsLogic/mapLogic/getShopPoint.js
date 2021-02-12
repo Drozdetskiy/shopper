@@ -1,6 +1,6 @@
-import { ICON_IMAGE_OFFSET, ICON_IMAGE_SIZE } from "./constants";
-import { initSlider } from "../../components/ShopCard/ShopSlider";
-import { ShopCard } from "../../components/ShopCard/ShopCard";
+import { ICON_IMAGE_OFFSET, ICON_IMAGE_SIZE } from './constants';
+import { initSlider } from '../../components/ShopCard/ShopSlider';
+import { ShopCard } from '../../components/ShopCard/ShopCard';
 
 function getShopPoint(shopInfo) {
     const BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
@@ -16,8 +16,8 @@ function getShopPoint(shopInfo) {
         shopInfo.coords,
         {},
         {
-            iconLayout: "default#image",
-            iconImageHref: "assets/placemark.svg",
+            iconLayout: 'default#image',
+            iconImageHref: 'assets/placemark.svg',
             iconImageSize: ICON_IMAGE_SIZE,
             iconImageOffset: ICON_IMAGE_OFFSET,
             balloonContentLayout: BalloonContentLayout,

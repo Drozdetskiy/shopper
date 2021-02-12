@@ -1,10 +1,10 @@
-import { getShopPoint } from "./getShopPoint";
+import { getShopPoint } from './getShopPoint';
 
 function initMap(mapData, shopData, postInit) {
     const shopPoints = [];
     const options = [];
     const callback = () => {
-        const map = new ymaps.Map("map", mapData);
+        const map = new ymaps.Map('map', mapData);
         shopData.forEach((shopInfo, key) => {
             const shopPoint = getShopPoint(shopInfo);
             shopPoints.push(shopPoint);

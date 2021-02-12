@@ -1,19 +1,19 @@
-import { getMapData } from "./data/getMapData";
-import { getShopData } from "./data/getShopData";
-import { initMap } from "./componentsLogic/mapLogic/initMap";
-import { initMenuSelect } from "./componentsLogic/menuLogic/initMenuSelect";
-import { initClearButton } from "./componentsLogic/clearButtonLogic/initClearButton";
-import { DEFAULT_OPTION_VALUE } from "./componentsLogic/clearButtonLogic/constants";
-import "reset-css";
-import "./styles/styles.css";
+import { getMapData } from './data/getMapData';
+import { getShopData } from './data/getShopData';
+import { initMap } from './componentsLogic/mapLogic/initMap';
+import { initMenuSelect } from './componentsLogic/menuLogic/initMenuSelect';
+import { initClearButton } from './componentsLogic/clearButtonLogic/initClearButton';
+import { DEFAULT_OPTION_VALUE } from './componentsLogic/clearButtonLogic/constants';
+import 'reset-css';
+import './styles/styles.css';
 
 async function initApp() {
     const addPointEvents = (menu, shopPoints) => {
         shopPoints.forEach((shopPoint, key) => {
-            shopPoint.balloon.events.add("open", () => {
+            shopPoint.balloon.events.add('open', () => {
                 menu.value = key;
             });
-            shopPoint.balloon.events.add("close", () => {
+            shopPoint.balloon.events.add('close', () => {
                 menu.value = DEFAULT_OPTION_VALUE;
             });
         });
@@ -34,5 +34,5 @@ async function initApp() {
 }
 
 initApp().catch((ex) => {
-    console.error("Can`t init app");
+    console.error('Can`t init app');
 });
